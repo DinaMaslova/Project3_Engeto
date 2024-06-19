@@ -1,0 +1,448 @@
+/*------------General---------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC&display=swap");
+
+:root {
+  --common-font: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  --heading-font: "LXGW WenKai TC";
+}
+
+body {
+  background-color: #fafafa;
+  transition: background 0.3 ease;
+  font-family: var(--common-font);
+}
+
+body.dark {
+  background: #181818;
+  color: #fff;
+}
+
+p {
+  font-size: 1.2rem;
+  padding-bottom: 10px;
+  font-family: var(--common-font);
+}
+
+/* -----------------------Mode------------------------ */
+.mode {
+  width: 100px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+.label {
+  background-color: #504d4d;
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  position: relative;
+  height: 26px;
+  width: 50px;
+  transform: scale(1.5);
+}
+
+.label .circle {
+  background-color: #ffffff;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  height: 22px;
+  width: 22px;
+  transform: translateX(0px);
+  transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .label .circle {
+  transform: translateX(24px);
+}
+
+.fa-solid {
+  color: #fdfdfd;
+}
+
+.fa-regular {
+  color: #000000;
+}
+
+/*-------------Header---------------*/
+
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: baseline;
+  background-color: #000000;
+  height: 70px;
+  position: fixed;
+  width: 100%;
+  transition: all 1s linear;
+  z-index: 1000;
+}
+
+.logo {
+  flex-grow: 1;
+}
+
+.logo img {
+  width: 160px;
+  margin-left: 40px;
+}
+
+/*-------------Navigace--------------*/
+
+nav {
+  margin-right: 40px;
+}
+
+nav li {
+  display: inline;
+  list-style-type: none;
+  margin-right: 20px;
+}
+
+nav li a {
+  text-decoration: none;
+  color: #fff;
+  line-height: 80px;
+  font-family: var(--common-font);
+}
+
+a:hover {
+  color: rgb(131, 129, 123);
+}
+
+.menu-icon {
+  display: none;
+  margin-right: 30px;
+}
+
+/*--------------Hero - text----------------*/
+
+.wrapper {
+  width: 100%;
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+video {
+  width: 100%;
+  height: 50%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-color: linear-gradient(to bottom, rgba(5, 5, 5, 0.63) 50%);
+}
+
+.info {
+  width: 100%;
+  height: auto;
+  bottom: 0;
+  position: absolute;
+  padding: 6%;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: space-between;
+}
+
+h1 {
+  font-size: 8rem;
+  color: #ffffff;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: var(--heading-font);
+}
+
+.info h2 {
+  font-size: 2rem;
+  color: #ffffff;
+  font-weight: 400;
+  font-family: var(--heading-font);
+  text-transform: uppercase;
+  line-height: 64px;
+}
+
+/*------------------------------1st section - text-----------------------------------*/
+
+#container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.info2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  padding: 10%;
+  text-align: justify;
+}
+
+#container h2 {
+  font-size: 3rem;
+  font-family: var(--common-font);
+  font-weight: 700;
+}
+
+/*------------------------------1st section - images-----------------------------------*/
+
+.gallery {
+  width: 100%;
+  padding: 10% 0%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #1d1d22;
+}
+.gallery-text {
+  width: 60%;
+  line-height: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.gallery h2,
+.gallery p {
+  text-align: center;
+  color: #fff;
+}
+
+.gallery-container {
+  width: 100%;
+  padding: 10% 0%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.gallery .gallery-img {
+  width: 400px;
+  height: 600px;
+  transition: transform 0.2s;
+}
+
+.gallery-img:hover {
+  transform: scale(1.2);
+}
+
+.gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*------------------------------2nd section - form -----------------------------------*/
+
+#formular {
+  width: 100%;
+  height: auto;
+  padding: 6% 2%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+h2 {
+  padding-bottom: 40px;
+}
+
+.email-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.email-form h2 {
+  font-size: 20px;
+  color: #f9f9f9;
+  letter-spacing: 1px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.email-form .email {
+  width: 300px;
+  background: #292929;
+  outline: none;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  color: #fff;
+  font-style: 18px;
+}
+
+.input-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Přidání ikonek do stránky */
+#form.invalid .input-box:before {
+  content: "";
+  position: absolute;
+  right: 12px;
+  top: 8px;
+  width: 24px;
+  height: 24px;
+  background: url(img/invalid.png);
+  background-size: cover;
+  z-index: 1000;
+}
+
+#form.valid .input-box:before {
+  content: "";
+  position: absolute;
+  right: 12px;
+  top: 8px;
+  width: 24px;
+  height: 24px;
+  background: url(img/valid.png);
+  background-size: cover;
+  z-index: 1000;
+}
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  width: 280px;
+}
+
+/* The popup form - hidden by default */
+#form {
+  display: none;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+  padding: 10px;
+}
+
+/* Add styles to the form container */
+#form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+#form input[type="text"],
+#form input[type="password"] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+/* When the inputs get focus, do something */
+#form input[type="text"]:focus,
+#form input[type="password"]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+#form .btn {
+  background-color: #04aa6d;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 10px;
+  opacity: 0.8;
+  border-radius: 10px;
+}
+
+/* Add a red background color to the cancel button */
+#form .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+#form .btn:hover,
+.open-button:hover {
+  opacity: 1;
+}
+
+/*------------------------------Footer-----------------------------------*/
+
+footer {
+  background-color: #29292a;
+  width: 100%;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.footer-icon {
+  width: 200px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.footer-icon img {
+  width: 40px;
+  height: 40px;
+}
+
+.top-page {
+  text-decoration: none;
+  background: #636364;
+  padding: 5px 10px;
+  border-radius: 15px;
+  color: #ffffff;
+  font-size: 18px;
+  position: fixed;
+  right: 20px;
+  bottom: 50px;
+  display: none;
+}
