@@ -1,45 +1,70 @@
 @media (max-width: 700px) {
-    header nav {
-      position: absolute;
-      top: 60px;
-      background-color: #29292a;
-      width: 100%;
-    }
-  
-    header nav li {
-      display: block;
-      text-align: center;
-      margin-top: 10px;
-      margin-bottom: 10px;
-    }
-  
-    .menu-icon {
-      display: block;
-      color: white;
-      font-size: 23px;
-    }
-  
-    .visible {
-      display: block !important;
-    }
-  
-    .hidden {
-      display: none;
-    }
-  
-    .info {
-      width: 80%;
-      margin-top: 100px;
-    }
-  
-    h1 {
-      font-size: 4em;
-    }
-
-    video, .overlay {
-      display: none;
-    }
-
-   
+  header nav {
+    position: absolute;
+    top: 60px;
+    background-color: #29292a;
+    width: 100%;
   }
-  
+
+  header nav li {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .menu-icon {
+    display: block;
+    color: white;
+    font-size: 23px;
+  }
+
+  .visible {
+    display: block !important;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .wrapper {
+    height: 400px;
+  }
+
+  #video-hero,
+  .overlay {
+    display: none;
+  }
+
+  .mode {
+    margin: 0;
+  }
+
+  .label {
+    width: 42px;
+    height: 20px;
+  }
+
+  .label .circle {
+    width: 17.5px;
+    height: 17.5px;
+    left: 0px;
+    top: 1px;
+  }
+
+  i {
+    font-size: 16px;
+  }
+
+  .logo img {
+    width: 120px;
+  }
+
+  .heading {
+    margin-top: 100px;
+  }
+
+  .gallery-container {
+    flex-direction: column;
+  }
+}

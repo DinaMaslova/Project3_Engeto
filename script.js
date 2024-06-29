@@ -25,16 +25,16 @@ const ul = document.querySelector("ul");
 const logo = document.querySelector("img");
 
 header.style.height = "70px";
-ul.style.fontSize = "20px";
+ul.style.fontSize = "16px";
 
 window.addEventListener("scroll", () => {
   if (window.scrollY >= 150) {
     header.style.height = "60px";
-    ul.style.fontSize = "16px";
+    ul.style.fontSize = "14px";
     logo.style.width = "140px";
   } else {
     header.style.height = "70px";
-    ul.style.fontSize = "20px";
+    ul.style.fontSize = "16px";
     logo.style.width = "160px";
   }
 });
@@ -79,10 +79,12 @@ window.addEventListener("scroll", function () {
 
 function openForm() {
   document.querySelector("Form").style.display = "block";
+  document.querySelector(".open-button").style.display = "none";
 }
 
 function closeForm() {
   document.querySelector("Form").style.display = "none";
+  document.querySelector(".open-button").style.display = "block";
 }
 
 const form = document.querySelector("#form");
