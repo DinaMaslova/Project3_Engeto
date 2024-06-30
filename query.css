@@ -1,4 +1,4 @@
-@media (max-width: 700px) {
+@media (max-width: 1000px) {
   header nav {
     position: absolute;
     top: 60px;
@@ -11,6 +11,26 @@
     text-align: center;
     margin-top: 10px;
     margin-bottom: 10px;
+  }
+
+  .about-us-text h2,
+  .info h2 {
+    font-size: 1.8rem;
+  }
+
+  .grid-item h2 {
+    font-size: 1.2rem;
+  }
+
+  .about-us-text p,
+  .info p {
+    font-size: 0.9rem;
+    line-height: 20px;
+  }
+
+  .grid-container .grid-item p {
+    font-size: 0.9rem;
+    line-height: 20px;
   }
 
   .menu-icon {
@@ -64,7 +84,37 @@
     margin-top: 100px;
   }
 
-  .gallery-container {
+  .grid-container {
+    grid-template-columns: none;
+  }
+
+  #about-us {
+    width: 100%;
+  }
+
+  #about-us .about-us-text {
+    width: 100%;
+  }
+
+  .container {
     flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
+  .container .card {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    background-color: #ffffff00;
+    padding: 0px 20px;
+    transition: 0.3s ease-in-out;
+  }
+
+  .formular-info-text {
+    max-width: 60%;
+  }
+
+  .formular-info-img {
+    display: none;
   }
 }
