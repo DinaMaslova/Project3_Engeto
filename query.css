@@ -1,4 +1,4 @@
-@media (max-width: 1000px) {
+@media (max-width: 900px) {
   header nav {
     position: absolute;
     top: 60px;
@@ -13,7 +13,7 @@
     margin-bottom: 10px;
   }
 
-  .about-us-text h2,
+  .container-wrapper h2,
   .info h2 {
     font-size: 1.8rem;
   }
@@ -22,7 +22,7 @@
     font-size: 1.2rem;
   }
 
-  .about-us-text p,
+  .content-text p,
   .info p {
     font-size: 0.9rem;
     line-height: 20px;
@@ -80,19 +80,15 @@
     width: 120px;
   }
 
-  .heading {
-    margin-top: 100px;
-  }
-
   .grid-container {
     grid-template-columns: none;
   }
 
-  #about-us {
+  #container wrapper {
     width: 100%;
   }
 
-  #about-us .about-us-text {
+  #about-us .content-text {
     width: 100%;
   }
 
@@ -110,11 +106,25 @@
     transition: 0.3s ease-in-out;
   }
 
+  .formular-info {
+    padding: 0% 6%;
+  }
+
   .formular-info-text {
     max-width: 60%;
   }
 
   .formular-info-img {
     display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .mode {
+    display: none;
+  }
+
+  .heading {
+    top: 70px;
   }
 }
