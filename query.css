@@ -99,11 +99,20 @@
   }
 
   .content-wrap-text {
-    max-width: 60%;
+    max-width: 100%;
+    margin-bottom: 30px;
   }
 
   .formular-info-img {
     display: none;
+  }
+
+  .footer-content {
+    flex-direction: column;
+  }
+
+  .footer-item {
+    margin: 30px;
   }
 }
 

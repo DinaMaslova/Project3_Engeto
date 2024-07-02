@@ -298,7 +298,7 @@ h1 {
   background-color: #ffffff00;
   transition: 0.3s ease-in-out;
   overflow: hidden;
-  border-radius: 8px;
+  border-radius: 20px;
   margin-bottom: 50px;
 }
 
@@ -358,7 +358,7 @@ h1 {
   justify-content: space-evenly;
   text-align: initial;
   line-height: 1.1rem;
-  text-align: justify;
+  text-align: center;
 }
 
 .content-wrap-text h2 {
@@ -402,15 +402,16 @@ h1 {
 }
 
 .open-button {
-  background-color: #555;
+  background-color: #5a5a5a;
   color: white;
   padding: 16px 20px;
   border: none;
   cursor: pointer;
   opacity: 0.8;
-  width: 280px;
-  font-size: 16px;
+  width: 260px;
+  font-size: 20px;
   margin: 40px;
+  border-radius: 20px;
 }
 
 #form {
@@ -470,24 +471,42 @@ h1 {
 footer {
   background-color: #29292a;
   width: 100%;
-  height: 200px;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   color: #fff;
+  padding: 2%;
 }
 
-.icon-footer {
+.footer-content {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 20px;
+}
+
+.footer-item {
   width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-icon {
+  width: 180px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 20px;
+  margin: 20px;
 }
 
-.icon-footer img {
+.footer-icon img {
   width: 40px;
   height: 40px;
 }
