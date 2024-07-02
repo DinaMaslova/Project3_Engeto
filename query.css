@@ -84,33 +84,21 @@
     grid-template-columns: none;
   }
 
-  #container wrapper {
+  #container-wrapper {
     width: 100%;
   }
 
-  #about-us .content-text {
+  #container-wrapper .content-wrap {
     width: 100%;
   }
 
-  .container {
+  .content-wrap-row {
     flex-direction: column;
     flex-wrap: nowrap;
-  }
-
-  .container .card {
-    position: relative;
-    width: 300px;
-    height: 400px;
-    background-color: #ffffff00;
-    padding: 0px 20px;
-    transition: 0.3s ease-in-out;
-  }
-
-  .formular-info {
     padding: 0% 6%;
   }
 
-  .formular-info-text {
+  .content-wrap-text {
     max-width: 60%;
   }
 
@@ -126,5 +114,14 @@
 
   .heading {
     top: 70px;
+  }
+
+  .content-wrap-row .card {
+    width: 300px;
+    height: 350px;
+  }
+
+  .title h2 {
+    font-size: var(--font2);
   }
 }
