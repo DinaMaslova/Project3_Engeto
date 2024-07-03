@@ -99,7 +99,7 @@ emailInput.addEventListener("input", () => {
     form.classList.add("valid");
     form.classList.remove("invalid");
     resultText.textContent = "Váš email je ve správném formátu";
-    resultText.style.color = "#00ff00";
+    resultText.style.color = "#04aa6d";
   } else {
     form.classList.add("invalid");
     form.classList.remove("valid");

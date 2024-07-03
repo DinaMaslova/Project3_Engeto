@@ -95,7 +95,7 @@
   .content-wrap-row {
     flex-direction: column;
     flex-wrap: nowrap;
-    padding: 0% 6%;
+    padding: 2% 6%;
   }
 
   .content-wrap-text {
@@ -133,4 +133,7 @@
   .title h2 {
     font-size: var(--font2);
   }
+}
+
+@media (max-width: 1600px) {
 }
