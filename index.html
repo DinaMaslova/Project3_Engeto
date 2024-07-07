@@ -246,7 +246,7 @@
           <p><strong>Registrace</strong></p>
           <div class="input-box">
             <input
-              type="text"
+              type="email"
               class="email"
               placeholder="Zadejte svůj email"
               name="email"
@@ -275,13 +275,13 @@
             />
           </div>
           <div>
-            <button type="submit" class="btn">Přihlásit se</button>
-            <button type="button" class="btn cancel" onclick="closeForm()">
-              Zavřit
+            <button type="submit" class="btn" id="login-form">
+              Přihlásit se
             </button>
+            <button type="button" id="close-button" class="btn">Zavřit</button>
           </div>
         </form>
-        <button class="open-button" onclick="openForm()">Registrovat se</button>
+        <button id="open-button" class="open-button">Registrovat se</button>
       </section>
     </main>
 
@@ -301,7 +301,7 @@
           ></iframe>
         </div>
         <div class="footer-item">
-          <p><strong>Adresa: </strong> Adresa: Plynární 3, 170 00, Praha 7</p>
+          <p><strong>Adresa: </strong>Plynární 3, 170 00, Praha 7</p>
           <p>
             <strong>Zavolejte nám: </strong
             ><a href="tel:+4733378901">(+420) 739 375 658</a>

@@ -20,22 +20,32 @@ menuIcon.addEventListener("click", () => {
 
 //-----------------------------header------------------------//
 
-const header = document.querySelector("header");
-const ul = document.querySelector("ul");
-const logo = document.querySelector("img");
+// const header = document.querySelector("header");
+// const ul = document.querySelector("ul");
+// const logo = document.querySelector("img");
 
-header.style.height = "70px";
-ul.style.fontSize = "16px";
+// header.style.height = "70px";
+// ul.style.fontSize = "16px";
+
+// window.addEventListener("scroll", () => {
+//   if (window.scrollY >= 150) {
+//     header.style.height = "60px";
+//     ul.style.fontSize = "14px";
+//     logo.style.width = "140px";
+//   } else {
+//     header.style.height = "70px";
+//     ul.style.fontSize = "16px";
+//     logo.style.width = "160px";
+//   }
+// });
+
+const body = document.body;
 
 window.addEventListener("scroll", () => {
   if (window.scrollY >= 150) {
-    header.style.height = "60px";
-    ul.style.fontSize = "14px";
-    logo.style.width = "140px";
+    body.classList.add("scrolled");
   } else {
-    header.style.height = "70px";
-    ul.style.fontSize = "16px";
-    logo.style.width = "160px";
+    body.classList.remove("scrolled");
   }
 });
 
@@ -77,63 +87,34 @@ window.addEventListener("scroll", function () {
   }
 });
 
-function openForm() {
+const openBtn = document.getElementById("open-button");
+
+openBtn.addEventListener("click", function () {
   document.querySelector("Form").style.display = "block";
   document.querySelector(".open-button").style.display = "none";
-}
+});
 
-function closeForm() {
+const closeBtn = document.getElementById("close-button");
+
+closeBtn.addEventListener("click", function () {
   document.querySelector("Form").style.display = "none";
   document.querySelector(".open-button").style.display = "block";
-}
+});
 
 const form = document.querySelector("#form");
 const emailInput = document.querySelector(".email");
-const resultText = document.querySelector(".text");
-const pattern = /^([a-z\d\.\-]+)@([a-z\d\-]+)\.([a-z]{2,8})(\.[a-z]{2,8})?$/;
-
-emailInput.addEventListener("input", () => {
-  const emailValue = emailInput.value;
-
-  if (emailValue.match(pattern)) {
-    form.classList.add("valid");
-    form.classList.remove("invalid");
-    resultText.textContent = "Váš email je ve správném formátu";
-    resultText.style.color = "#04aa6d";
-  } else {
-    form.classList.add("invalid");
-    form.classList.remove("valid");
-    resultText.textContent = "Váš email není ve správném formátu";
-    resultText.style.color = "#ff0000";
-  }
-
-  if (emailValue === "") {
-    form.classList.remove("invalid");
-    form.classList.remove("valid");
-    resultText.textContent = "";
-  }
-});
+const resultText = document.querySelector(".email");
 
 //-------------------password-match----------------------//
 
-// Function to check Whether both passwords
-// is same or not.
 function checkPassword(form) {
   psw1 = form.psw1.value;
   psw2 = form.psw2.value;
 
-  // If password not entered
-  if (psw1 == "") alert("");
-  // If confirm password not entered
-  else if (psw2 == "") alert("");
-  // If Not same return False.
+  if (psw2 == "") resultText.textContent = "";
   else if (psw1 != psw2) {
-    alert("Heslo je nesprávné: Zkuste prosím znovu...");
-    return false;
-  }
-
-  // If same return True.
-  else {
+    resultText.textContent = "Heslo je nesprávné: Zkuste prosím znovu...";
+  } else {
     alert("Heslo je správné");
     return true;
   }
