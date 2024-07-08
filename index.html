@@ -241,47 +241,43 @@
             <img src="img/boxing-gloves.png" alt="" />
           </div>
         </div>
+        <div class="content-wrap">
+          <form id="form" onsubmit="return checkForm()">
+            <p><strong>Registrace</strong></p>
+            <div class="input-box">
+              <input
+                type="email"
+                class="email"
+                placeholder="Zadejte svůj email"
+                name="email"
+                required
+                autocomplete="off"
+              />
+              <label for="psw"><b>Heslo</b></label>
+              <input
+                id="pass"
+                type="password"
+                placeholder="Zadejte heslo"
+                name="psw1"
+                required
+                autocomplete="off"
+              />
 
-        <form onSubmit="return checkPassword(this)" id="form" class="invalid">
-          <p><strong>Registrace</strong></p>
-          <div class="input-box">
-            <input
-              type="email"
-              class="email"
-              placeholder="Zadejte svůj email"
-              name="email"
-              required
-              autocomplete="off"
-            />
-            <span class="text"></span>
-          </div>
-          <div>
-            <label for="psw"><b>Heslo</b></label>
-            <input
-              type="password"
-              placeholder="Zadejte heslo"
-              name="psw1"
-              required
-              autocomplete="off"
-            />
+              <label for="psw"><b>Heslo znovu</b></label>
+              <input
+                id="repass"
+                type="password"
+                placeholder="Zadejte heslo znovu"
+                name="psw2"
+                required
+                autocomplete="off"
+              />
 
-            <label for="psw"><b>Heslo znovu</b></label>
-            <input
-              type="password"
-              placeholder="Zadejte heslo znovu"
-              name="psw2"
-              required
-              autocomplete="off"
-            />
-          </div>
-          <div>
-            <button type="submit" class="btn" id="login-form">
-              Přihlásit se
-            </button>
-            <button type="button" id="close-button" class="btn">Zavřit</button>
-          </div>
-        </form>
-        <button id="open-button" class="open-button">Registrovat se</button>
+              <div id="message-psw" class="message-psw"></div>
+            </div>
+            <button type="submit">Odeslat</button>
+          </form>
+        </div>
       </section>
     </main>
 

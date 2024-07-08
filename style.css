@@ -27,6 +27,14 @@ body.dark {
   color: var(--font-color1);
 }
 
+body.dark a {
+  color: #000;
+}
+
+body.dark header {
+  background-color: #a8a8aa;
+}
+
 .title h2 {
   font-weight: 500;
   font-size: var(--font3);
@@ -124,7 +132,6 @@ ul {
 
 .scrolled header {
   height: 60px;
-  color: #04aa6d;
 }
 
 .scrolled ul {
@@ -409,45 +416,8 @@ h1 {
   border-radius: 8px;
 }
 
-#form.invalid .input-box:before {
-  content: "";
-  position: absolute;
-  right: 12px;
-  top: 16px;
-  width: 24px;
-  height: 24px;
-  background: url(img/invalid.png);
-  background-size: cover;
-  z-index: 1000;
-}
-
-#form.valid .input-box:before {
-  content: "";
-  position: absolute;
-  right: 12px;
-  top: 8px;
-  width: 24px;
-  height: 24px;
-  background: url(img/valid.png);
-  background-size: cover;
-  z-index: 1000;
-}
-
-.open-button {
-  background-color: #5a5a5a;
-  color: white;
-  padding: 16px 20px;
-  border: none;
-  cursor: pointer;
-  opacity: 0.8;
-  width: 260px;
-  font-size: 20px;
-  margin: 40px;
-  border-radius: 20px;
-}
-
 #form {
-  display: none;
+  display: block;
   bottom: 0;
   right: 15px;
   border: 3px solid #f1f1f1;
@@ -462,13 +432,20 @@ h1 {
 }
 
 #form input[type="email"],
-#form input[type="password"] {
+#form input[type="password"],
+button {
   width: 100%;
   padding: 15px;
   margin: 5px 0 22px 0;
   border: none;
   background: #f1f1f1;
   border-radius: 10px;
+}
+
+#form input[type="email"]:focus,
+#form input[type="password"]:focus {
+  background-color: #ddd;
+  outline: none;
 }
 
 #form input[type="email"]:focus,
@@ -498,10 +475,15 @@ h1 {
   opacity: 1;
 }
 
+.message-psw {
+  padding: 10px;
+  font-size: 14px;
+  color: rgb(128, 128, 128);
+}
 /*------------------------------Footer-----------------------------------*/
 
 footer {
-  background-color: #29292a;
+  background-color: #141429;
   width: 100%;
   height: auto;
   display: flex;

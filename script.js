@@ -20,25 +20,6 @@ menuIcon.addEventListener("click", () => {
 
 //-----------------------------header------------------------//
 
-// const header = document.querySelector("header");
-// const ul = document.querySelector("ul");
-// const logo = document.querySelector("img");
-
-// header.style.height = "70px";
-// ul.style.fontSize = "16px";
-
-// window.addEventListener("scroll", () => {
-//   if (window.scrollY >= 150) {
-//     header.style.height = "60px";
-//     ul.style.fontSize = "14px";
-//     logo.style.width = "140px";
-//   } else {
-//     header.style.height = "70px";
-//     ul.style.fontSize = "16px";
-//     logo.style.width = "160px";
-//   }
-// });
-
 const body = document.body;
 
 window.addEventListener("scroll", () => {
@@ -86,36 +67,40 @@ window.addEventListener("scroll", function () {
     });
   }
 });
+//----------------------form-oprava----------------//
 
-const openBtn = document.getElementById("open-button");
+// const openBtn = document.getElementById("open-button");
 
-openBtn.addEventListener("click", function () {
-  document.querySelector("Form").style.display = "block";
-  document.querySelector(".open-button").style.display = "none";
-});
+// openBtn.addEventListener("click", function () {
+//   document.querySelector("Form").style.display = "block";
+//   document.querySelector(".open-button").style.display = "none";
+// });
 
-const closeBtn = document.getElementById("close-button");
+// const closeBtn = document.getElementById("close-button");
 
-closeBtn.addEventListener("click", function () {
-  document.querySelector("Form").style.display = "none";
-  document.querySelector(".open-button").style.display = "block";
-});
+// closeBtn.addEventListener("click", function () {
+//   document.querySelector("Form").style.display = "none";
+//   document.querySelector(".open-button").style.display = "block";
+// });
 
-const form = document.querySelector("#form");
-const emailInput = document.querySelector(".email");
-const resultText = document.querySelector(".email");
+// const form = document.querySelector("#form");
+// const emailInput = document.querySelector(".email");
+// const resultText = document.querySelector(".email");
 
 //-------------------password-match----------------------//
 
-function checkPassword(form) {
-  psw1 = form.psw1.value;
-  psw2 = form.psw2.value;
-
-  if (psw2 == "") resultText.textContent = "";
-  else if (psw1 != psw2) {
-    resultText.textContent = "Heslo je nesprávné: Zkuste prosím znovu...";
-  } else {
-    alert("Heslo je správné");
-    return true;
+function checkForm() {
+  const p1 = document.getElementById("pass");
+  const p2 = document.getElementById("repass");
+  const message = document.getElementById("message-psw");
+  if (p1.value.length < 6) {
+    message.textContent = "heslo musi obsahovat alespon 6 znaku";
+    return false;
   }
+  if (p1.value != p2.value) {
+    message.textContent = "hesla se neshoduji";
+    return false;
+  }
+  message.textContent = "hesla jsou stejna";
+  return true;
 }
